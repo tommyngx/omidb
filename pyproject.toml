@@ -1,0 +1,36 @@
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest<8.0.0,>=7.1.2",
+    "pytest-mock<4.0.0,>=3.8.1",
+    "ruff>=0.0.280",
+    "black>=23.3.0",
+]
+
+[tool.pdm.build]
+includes = []
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[project]
+name = "omidb"
+version = "0.13.1"
+description = "Python package and CLI for The OPTIMAM Mammography Image Database (OMI-DB)"
+authors = [
+    {name = "Dominic Ward", email = "dominic.ward1@nhs.net"},
+]
+dependencies = [
+    "click>=7.0",
+    "matplotlib>=3.1.2",
+    "loguru>=0.4.1",
+    "pydicom>=1.4.1",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[project.scripts]
+omidb = "omidb:commands.main"
