@@ -1,4 +1,5 @@
 # OMI-DB
+Clone from: https://bitbucket.org/scicomcore/omi-db.git
 
 A command-line interface and Python package to work with the [OPTIMAM Mammography Image Database](https://medphys.royalsurrey.nhs.uk/omidb/).
 
